@@ -3,8 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   validates :username, presence: true, uniqueness: { case_sensitive: false }, length: { maximum: 15 }
   validates :fullname, presence: true
-  mount_uploader :photo, ImageUploader
-  mount_uploader :background_image, ImageUploader
+  
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 

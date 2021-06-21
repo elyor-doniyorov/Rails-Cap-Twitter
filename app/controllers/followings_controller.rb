@@ -7,7 +7,7 @@ class FollowingsController < ApplicationController
   end
 
   def destroy_user
-    user = User.find(params[:followerid])
+    User.find(params[:followerid])
     @friendship = Following.find_by(followerid: params[:followedid])
     @friendship.destroy
     redirect_to user_path(params[:followerdid])

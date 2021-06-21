@@ -70,6 +70,249 @@ body {
   position: absolute;
 }
 
+.profile-links a {
+  color: $font-color;
+  text-decoration: none;
+  cursor: pointer;
+  margin-left: 10px;
+
+  :hover {
+    color: white;
+  }
+}
+
+.photo-adduser a {
+  font-size: 40px;
+}
+
+.photo-adduser span {
+  color: $border-following;
+  font-size: 40px;
+  justify-content: center;
+  display: flex;
+}
+
+.user-details a:hover {
+  cursor: pointer;
+}
+
+.user-section .user-details a {
+  font-weight: bold;
+  color: $font-color;
+}
+
+.rightbar-home .user-section a {
+  cursor: pointer;
+}
+
+.user-opinions .user-details a {
+  color: $font-color;
+}
+
+.tweets-follows span {
+  margin-bottom: 20px;
+}
+
+.username-name span {
+  padding-top: 10px;
+}
+
+.followed_by span {
+  padding-bottom: 20px;
+  border-bottom: 1px solid $border-following;
+  width: 100%;
+  display: block;
+}
+
+.top-bar {
+  margin-left: $width;
+  background-image: $selector-blue;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30px;
+  align-items: center;
+  color: $top-bar-font;
+
+  div > * {
+    margin-left: 20px;
+  }
+
+  img {
+    width: 40px;
+  }
+
+  div {
+    justify-content: center;
+    display: flex;
+    font-weight: bold;
+
+    a:hover {
+      text-decoration: none;
+      color: white;
+      cursor: pointer;
+    }
+  }
+}
+
+.login div {
+  display: flex;
+  flex-direction: row;
+  color: $top-bar-font;
+  width: 80%;
+
+  span {
+    background-image: $selector-blue;
+    color: white;
+    font-size: 45px;
+  }
+
+  .username-field {
+    border-radius: 0;
+    border: none;
+    width: calc(100% - 45px);
+    padding-left: 10px;
+  }
+}
+
+.home-user .rightbar-home div {
+  margin-top: 20px;
+}
+
+.home-user .rightbar-home span {
+  margin-left: 20px;
+}
+
+.rightbar-home h4 {
+  padding-bottom: 20px;
+  border-bottom: 1px solid $border-following;
+  font-size: $font-size;
+}
+
+.rightbar-home img {
+  width: 60px;
+  height: 60px;
+  border-radius: 40px;
+  background-color: $new-tweets;
+  object-fit: cover;
+}
+
+.middle-section h4 {
+  font-size: 15px;
+}
+
+.sidebar {
+  background-color: $main-background;
+
+  @include text;
+
+  width: $width;
+  height: 100%;
+  position: fixed;
+
+  .profile-user {
+    display: flex;
+    background-color: $top-background;
+    padding: 20px;
+    font-size: $font-size;
+
+    h3 {
+      margin-left: 20px;
+      font-size: $font-size;
+    }
+  }
+
+  .image {
+    background-color: white;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+  }
+
+  .profile-follows {
+    display: flex;
+    margin-bottom: 10px;
+    background-color: $top-background;
+    border-top: 3px solid $divisor-color;
+    justify-content: space-evenly;
+  }
+
+  .follows {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 0;
+
+    h4 {
+      margin-bottom: 0;
+      color: white;
+      font-weight: bold;
+      font-size: $font-size;
+    }
+  }
+
+  .divisor {
+    width: 1px;
+    background-color: $divisor-color;
+  }
+
+  .profile-links {
+    display: flex;
+    flex-direction: column;
+    font-size: $font-size;
+
+    :hover {
+      background-image: $selector-blue;
+      color: white;
+    }
+
+    div {
+      display: flex;
+      padding: 20px;
+      align-items: center;
+    }
+  }
+}
+
+.edit {
+  margin: 30px 30px 0 300px;
+  border: 1px solid $border-following;
+  padding: 20px;
+  background-color: white;
+  display: flex;
+
+  img {
+    width: 100%;
+    margin-right: 20px;
+    flex-grow: 1;
+    max-width: 50%;
+  }
+
+  form {
+    flex-grow: 1;
+    width: 100%;
+  }
+
+  .edit-path {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .form-group {
+      input {
+        width: 100%;
+      }
+    }
+  }
+
+  .btn {
+    border: none;
+    background-image: $selector-blue;
+    color: white;
+  }
+}
+
 .login {
   background-color: $signin-background;
   color: $border-following;
@@ -143,26 +386,6 @@ body {
       color: white;
       width: 80%;
     }
-
-    div {
-      display: flex;
-      flex-direction: row;
-      color: $top-bar-font;
-      width: 80%;
-
-      span {
-        background-image: $selector-blue;
-        color: white;
-        font-size: 45px;
-      }
-
-      .username-field {
-        border-radius: 0;
-        border: none;
-        width: calc(100% - 45px);
-        padding-left: 10px;
-      }
-    }
   }
 
   div > * {
@@ -170,261 +393,28 @@ body {
   }
 }
 
-.home-user {
-  display: flex;
-  flex-direction: row;
-  height: 100%;
+.rightbar-user .user-det {
+  padding: 20px;
 
-  .rightbar-home {
-    @include text;
-
-    font-size: $font-size;
-    width: 310px;
-    padding: 30px;
-    color: $font-color;
-    border-left: 1px solid $border-following;
-    border-bottom: 1px solid $border-following;
-
-    .user-section {
-      display: flex;
-
-      a {
-        cursor: pointer;
-      }
-
-      .middle-section {
-        margin: 0 0 0 $width;
-
-        .cover-img {
-          width: 100%;
-          height: 200px;
-          background-color: $new-tweets;
-          object-fit: cover;
-        }
-      }
-
-      .rightbar-user {
-        width: 310px;
-        border-left: 1px solid $border-following;
-      }
-    }
-
-    h4 {
-      padding-bottom: 20px;
-      border-bottom: 1px solid $border-following;
-      font-size: $font-size;
-    }
-
-    img {
-      width: 60px;
-      height: 60px;
-      border-radius: 40px;
-      background-color: $new-tweets;
-      object-fit: cover;
-    }
-
-    div {
-      margin-top: 20px;
-    }
-
-    span {
-      margin-left: 20px;
-    }
-  }
-
-  .middle-section {
-    color: $font-color;
-    margin: $margin-middle;
-    padding: 0;
-
-    h4 {
-      font-size: 15px;
-    }
-
-    .tweet-section {
-      height: 180px;
-
-      @include tweets;
-
-      flex-direction: column;
-      justify-content: space-between;
-      margin: 30px;
-
-      h4 {
-        margin: 0;
-      }
-    }
-
-    .tweet {
-      border: $border-following 1px solid;
-      height: 80px;
-      border-radius: 10px;
-      padding: 10px;
-      width: 100%;
-    }
-
-    .new-tweets {
-      @include tweets;
-
-      margin: 30px;
-      flex-direction: column;
-      height: 100%;
-      color: $new-tweets;
-
-      h4 {
-        border-bottom: 1px solid $border-following;
-        font-weight: bold;
-        padding-bottom: 20px;
-        margin: 0;
-      }
-
-      .user-opinions {
-        display: flex;
-        margin-top: 20px;
-
-        .user-details {
-          display: flex;
-          flex-direction: column;
-          color: $font-color;
-          margin-right: 20px;
-
-          h5 {
-            margin-top: 0;
-            font-weight: bold;
-          }
-
-          a {
-            color: $font-color;
-          }
-        }
-
-        img {
-          width: 60px;
-          height: 60px;
-          border-radius: 40px;
-          margin-right: 20px;
-          background-color: $new-tweets;
-          object-fit: cover;
-        }
-      }
-    }
-  }
-}
-
-.sidebar {
-  background-color: $main-background;
-
-  @include text;
-
-  width: $width;
-  height: 100%;
-  position: fixed;
-
-  .profile-user {
+  .photo-adduser {
     display: flex;
-    background-color: $top-background;
-    padding: 20px;
-    font-size: $font-size;
-
-    h3 {
-      margin-left: 20px;
-      font-size: $font-size;
-    }
-  }
-
-  .image {
-    background-color: white;
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-  }
-
-  .profile-follows {
-    display: flex;
-    margin-bottom: 10px;
-    background-color: $top-background;
-    border-top: 3px solid $divisor-color;
     justify-content: space-evenly;
+    align-items: center;
   }
 
-  .follows {
+  .username-name {
     display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 10px 0;
-
-    h4 {
-      margin-bottom: 0;
-      color: white;
-      font-weight: bold;
-      font-size: $font-size;
-    }
-  }
-
-  .divisor {
-    width: 1px;
-    background-color: $divisor-color;
-  }
-
-  .profile-links {
-    display: flex;
-    flex-direction: column;
-    font-size: $font-size;
-    font-weight: 500px;
-
-    :hover {
-      background-image: $selector-blue;
-      color: white;
-    }
-
-    a {
-      color: $font-color;
-      text-decoration: none;
-      cursor: pointer;
-      margin-left: 10px;
-
-      :hover {
-        color: white;
-      }
-    }
-
-    div {
-      display: flex;
-      padding: 20px;
-      align-items: center;
-    }
-  }
-}
-
-.top-bar {
-  margin-left: $width;
-  background-image: $selector-blue;
-  height: 80px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 30px;
-  align-items: center;
-  color: $top-bar-font;
-
-  div > * {
-    margin-left: 20px;
-  }
-
-  img {
-    width: 40px;
-  }
-
-  div {
     justify-content: center;
-    display: flex;
-    font-weight: bold;
+    align-items: center;
+    flex-direction: column;
+  }
 
-    a:hover {
-      text-decoration: none;
-      color: white;
-      cursor: pointer;
-    }
+  .profile-photo {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50px;
+    background-color: $new-tweets;
   }
 }
 
@@ -439,15 +429,6 @@ body {
     padding-left: 20px;
     color: $font-color;
     font-size: 1rem;
-
-    a:hover {
-      cursor: pointer;
-    }
-
-    a {
-      font-weight: bold;
-      color: $font-color;
-    }
   }
 
   .middle-section {
@@ -506,55 +487,34 @@ body {
     width: 310px;
     border-left: 1px solid $border-following;
 
-    .user-det {
-      padding: 20px;
+    .tweets-follows {
+      display: flex;
+      justify-content: space-evenly;
+      border-top: 1px solid $border-following;
+      border-bottom: 1px solid $border-following;
+      flex-flow: wrap;
 
-      .photo-adduser {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-
-        a {
-          font-size: 40px;
-        }
-
-        span {
-          color: $border-following;
-          font-size: 40px;
-          justify-content: center;
-          display: flex;
-        }
+      .line {
+        width: 1px;
+        background-color: $border-following;
       }
 
-      .username-name {
+      .section {
         display: flex;
-        justify-content: center;
-        align-items: center;
         flex-direction: column;
+        align-items: center;
+        color: $border-following;
+        width: 33%;
 
-        span {
-          padding-top: 10px;
+        span:first-child {
+          margin: 20px 0 0 0;
+          color: $font-color;
         }
-      }
-
-      .profile-photo {
-        width: 90px;
-        height: 90px;
-        object-fit: cover;
-        border-radius: 50px;
-        background-color: $new-tweets;
       }
     }
 
     .followed_by {
       padding: 20px;
-
-      span {
-        padding-bottom: 20px;
-        border-bottom: 1px solid $border-following;
-        width: 100%;
-        display: block;
-      }
 
       .follower-det {
         display: flex;
@@ -590,73 +550,113 @@ body {
         }
       }
     }
+  }
+}
 
-    .tweets-follows {
-      display: flex;
-      justify-content: space-evenly;
-      border-top: 1px solid $border-following;
+.home-user .middle-section {
+  color: $font-color;
+  margin: $margin-middle;
+  padding: 0;
+
+  .tweet-section {
+    height: 180px;
+
+    @include tweets;
+
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 30px;
+
+    h4 {
+      margin: 0;
+    }
+  }
+
+  .tweet {
+    border: $border-following 1px solid;
+    height: 80px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .new-tweets {
+    @include tweets;
+
+    margin: 30px;
+    flex-direction: column;
+    height: 100%;
+    color: $new-tweets;
+
+    h4 {
       border-bottom: 1px solid $border-following;
-      flex-flow: wrap;
+      font-weight: bold;
+      padding-bottom: 20px;
+      margin: 0;
+    }
 
-      .line {
-        width: 1px;
-        background-color: $border-following;
-      }
+    .user-opinions {
+      display: flex;
+      margin-top: 20px;
 
-      span {
-        margin-bottom: 20px;
-      }
-
-      .section {
+      .user-details {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        color: $border-following;
-        width: 33%;
+        color: $font-color;
+        margin-right: 20px;
 
-        span:first-child {
-          margin: 20px 0 0 0;
-          color: $font-color;
+        h5 {
+          margin-top: 0;
+          font-weight: bold;
         }
+      }
+
+      img {
+        width: 60px;
+        height: 60px;
+        border-radius: 40px;
+        margin-right: 20px;
+        background-color: $new-tweets;
+        object-fit: cover;
       }
     }
   }
 }
 
-.edit {
-  margin: 30px 30px 0 300px;
-  border: 1px solid $border-following;
-  padding: 20px;
-  background-color: white;
+.home-user {
   display: flex;
+  flex-direction: row;
+  height: 100%;
 
-  img {
-    width: 100%;
-    margin-right: 20px;
-    flex-grow: 1;
-    max-width: 50%;
-  }
+  .rightbar-home {
+    @include text;
 
-  form {
-    flex-grow: 1;
-    width: 100%;
-  }
+    font-size: $font-size;
+    width: 310px;
+    padding: 30px;
+    color: $font-color;
+    border-left: 1px solid $border-following;
+    border-bottom: 1px solid $border-following;
 
-  .edit-path {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+    .user-section {
+      display: flex;
 
-    .form-group {
-      input {
-        width: 100%;
+      .middle-section {
+        margin: 0 0 0 $width;
+
+        .cover-img {
+          width: 100%;
+          height: 200px;
+          background-color: $new-tweets;
+          object-fit: cover;
+        }
+      }
+
+      .rightbar-user {
+        width: 310px;
+        border-left: 1px solid $border-following;
       }
     }
-  }
-  .btn {
-    border: none;
-    background-image: $selector-blue;
-    color: white;
   }
 }
 

@@ -1,29 +1,48 @@
-<h2>Sign up</h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<body class = "background-twitter">
+  <div class ="text-center form-group container background-twitter mt-5">
+    <div class = "row col-6 mx-auto devise-forms">
+      <div class = "w-75">
+        <h2>Sign up </h2>
+      </div>
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
+        <div class="col-xs-2 w-75">
+          <%= f.label :fullname %><br />
+          <%= f.text_field :fullname, autofocus: true, autocomplete: "fullname", class: "form-control" %>
+        </div>
+        <div class="col-xs-2 w-75">
+          <%= f.label :username %><br />
+          <%= f.text_field :username, autofocus: true, autocomplete: "username", class: "form-control" %>
+        </div>
+        <div class="col-xs-2 w-75">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+        </div>
+        <div class="col-xs-2 w-75">
+          <%= f.label :password %><br />
+          <% if @minimum_password_length %>
+            <br />
+            <em><%= @minimum_password_length %> characters minimum</em>
+          <% end %>
+          <%= f.password_field :password, autocomplete: "new-password", class: "form-control"%>
+        </div>
+        <div class="col-xs-2 w-75">
+          <%= f.label :password_confirmation %><br />
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control"%>
+        </div>
+        <div class="col-xs-2 w-75 mt-3">
+          <%= f.label :profile_image, 'Profile Image'%>
+          <%= f.file_field :photo,  class: "btn btn-primary mb-3"%>
+          <%= f.label :background_image, 'Background image' %>
+          <%= f.file_field :background_image,  class: "btn btn-primary"%>
+        </div>
+        <div class="actions col-xs-2 w-75">
+          <%= f.submit "Sign up", class: "btn btn-primary mt-3" %>
+        </div>
+      <% end %>
+      <div class = "w-75 mt-3 text-white">
+        <%= render "devise/shared/links" %>
+      </div>
+    </div>
   </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</body>

@@ -1,26 +1,35 @@
+<body class = "background-twitter">
+<div class ="text-center form-group container background-twitter mt-5">
+<div class = "row col-6 mx-auto">
+<div class = "w-75">
 <h2>Log in</h2>
-
+</div>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
+  <div class="col-xs-2 w-75">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="col-xs-2 w-75">
     <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
+    <%= f.password_field :password, autocomplete: "current-password", class: "form-control"%>
   </div>
 
   <% if devise_mapping.rememberable? %>
-    <div class="field">
+    <div class="col-xs-2 w-75">
       <%= f.check_box :remember_me %>
       <%= f.label :remember_me %>
     </div>
   <% end %>
 
-  <div class="actions">
+  <div class="actions w-75">
     <%= f.submit "Log in" %>
   </div>
 <% end %>
 
+<div class = "w-75">
 <%= render "devise/shared/links" %>
+</div>
+</div>
+</div>
+</body>

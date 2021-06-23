@@ -53,7 +53,7 @@ The TaTme project sets up an that allows you to share your opinions related to d
 
 - [Live Demo Link](https://tweety-tatme.herokuapp.com/)
 
-- [Video]()
+- [Video](https://www.youtube.com/watch?v=i2L0Im4_49Q)
 
 ## Contributing
 

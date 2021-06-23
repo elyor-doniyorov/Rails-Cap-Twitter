@@ -132,7 +132,6 @@ The testing files are included in spec folders.
 * [Microverse](https://www.microverse.org/)
 * Design idea by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella)
 
-
 ## 📝 License
 
 This project is [MIT](https://github.com/elyor-doniyorov/Rails-Cap-Twitter/blob/development/LICENSE) licensed.

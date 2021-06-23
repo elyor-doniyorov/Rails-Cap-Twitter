@@ -135,4 +135,4 @@ The testing files are included in spec folders.
 
 ## 📝 License
 
-This project is [MIT](licence) licensed.
+This project is [MIT](https://github.com/elyor-doniyorov/Rails-Cap-Twitter/blob/development/LICENSE) licensed.

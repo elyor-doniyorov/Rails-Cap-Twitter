@@ -118,10 +118,6 @@ The testing files are included in spec folders.
 
 ```
 
-<p align="center">
-  <img height="auto" src="app/assets/images/rspec.png">
-</p>
-
 ## Authors
 
 👤 Elyor Doniyorov

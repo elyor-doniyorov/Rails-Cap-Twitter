@@ -46,7 +46,7 @@ The TaTme project sets up an that allows you to share your opinions related to d
 
 ## Edit User
 <p align="center">
-  <img height="auto" src="app/assets/images/opinion.png">
+  <img height="auto" src="app/assets/images/profile.png">
 </p>
 
 ## Live Demo

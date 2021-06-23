@@ -51,7 +51,7 @@ The TaTme project sets up an that allows you to share your opinions related to d
 
 ## Live Demo
 
-- [Live Demo Link]()
+- [Live Demo Link](https://tweety-tatme.herokuapp.com/)
 
 - [Video]()
 
@@ -73,7 +73,7 @@ Terminal or similar to execute the program.
 
 - To get a local copy up and running follow these simple example steps.
 - Clone this repository with git clone ```https://github.com/elyor-doniyorov/Rails-Cap-Twitter.git``` using your terminal or command line.
-- Change to the project directory by entering: ```cd workspace``` in the terminal.
+- Change to the project directory by entering: ```cd tatme``` in the terminal.
 
 ## How to use the Private-Event app
 1. run the command ```bundle install```   This will install the required dependencies

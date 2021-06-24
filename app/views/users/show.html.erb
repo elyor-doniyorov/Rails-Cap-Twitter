@@ -1,0 +1,61 @@
+<div class="user-section">
+  <div class="middle-section container">
+    <%= picture_for(@user)%>
+    <div class="new-tweets">
+      <h4>ALL TWEETS</h4>
+
+      <% @user.opinions.newsfeed_opinions.all.each do |opinion|%>
+        <div class="card" style="width: 100%";>
+          <div class="card-body">
+            <h5 class="card-title"><%= opinion.author.username %></h5>
+            <h6 class="card-subtitle mb-2 text-muted"><%=opinion.author.fullname%></h6>
+            <p class="card-text"><%= opinion.text %></p>
+            <p class = "all-opinions-counter text-dark">This opinion has <%= opinion.likes.count %> likes</a>
+                <p class = "all-opinions-counter text-dark">Created at : <%= opinion.created_at.to_date %></a>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="rightbar-user">
+    <div class="user-det">
+      <div class="photo-adduser">
+        <%= user_follow_enabled?%>
+        <%= avatar_for(@user)%>
+        <span class="material-icons">list</span>
+      </div>
+      <div class="username-name">
+        <span><%= @user.fullname%></span>
+        <span>@<%= @user.username %></span>
+      </div>
+    </div>
+    <div class="tweets-follows">
+      <div class="section">
+        <span><%= @user.opinion_count %></span>
+        <span>Opinion</span>
+      </div>
+      <div class="line"></div>
+      <div class="section">
+        <span><%= @user.count_following %></span>
+        <span>Followers</span>
+      </div>
+      <div class="line"></div>
+      <div class="section">
+        <span><%= @user.count_followers %></span>
+        <span>Following</span>
+      </div>
+    </div>
+    <div class="followed_by">
+      <span>FOLLOWED BY</span>
+      <% @followers.each do |user| %>
+        <div class="follower-det">
+          <%= avatar_for(user.follower)%> 
+          <div class="follower-name">
+            <%= link_to user.follower.fullname, user_path(user.follower.id), id: "link" %></a>
+          <a>@<%= user.follower.fullname %><a>
+            </div>
+          </div>
+        <%end%>
+      </div>
+    </div>
+</div>

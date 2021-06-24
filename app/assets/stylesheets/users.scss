@@ -1,0 +1,28 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.background-twitter {
+  background-color: rgb(29, 161, 242);
+}
+
+.devise-forms {
+  left: 15%;
+}
+
+.material-icons-special {
+  font-size: 40px;
+  justify-content: center;
+  display: flex;
+}
+
+.all-opinions {
+  margin-top: 10px;
+  font-weight: initial !important;
+  font-size: 1.5rem;
+}
+
+.all-opinions-counter {
+  margin-top: 10px;
+  font-weight: initial !important;
+  font-size: 0.8rem;
+}

@@ -1,0 +1,33 @@
+<div class="home-user">
+  <div class="middle-section container">
+    <div class="tweet-section">
+      <h4>What's Happening?</h4>
+      <div>
+        <%= form_for @opinion do |opinion| %>
+          <%= opinion.text_field :text, class:"tweet", id:"text"%>
+          <%= opinion.submit "Tweet", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+    <div class="new-tweets">
+      <h4> NEW OPINIONS</h4>
+      <% Opinion.newsfeed_opinions.each do |opinions|%>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"><%= link_to opinions.author.username, user_path(opinions.author.id) %></h5>
+            <h6 class="card-subtitle mb-2 text-muted"><%=opinions.author.fullname%></h6>
+            <p class="card-text"><%= opinions.text %></p>
+            <p class = "all-opinions-counter text-dark">This opinion has <%= opinions.likes.count %> likes</a>
+            <p class = "all-opinions-counter text-dark">Created at : <%= opinions.created_at.to_date %></a>
+            <%= dynamic_like(opinions, "opinion")%>
+          </div>
+        </div>
+      <%end%>
+    </div>
+  </div>
+  <div class="rightbar-home">
+    <h4>WHO TO FOLLOW</h4>
+    <% current_user.not_following.each do |f| %>
+      <%= who_to_follow(f)%>
+    <% end %>
+  </div>

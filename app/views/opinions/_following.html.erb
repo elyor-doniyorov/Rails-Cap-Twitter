@@ -1,0 +1,14 @@
+<div class="user-section">
+  <div class="user-photo">
+    <%= avatar_for(f) %>
+  </div>
+  <div class="user-details">
+    <%= link_to f.username, user_path(f.id) %>
+    <%= f.fullname %>
+  </div>
+  <div class = "text-center pt-3">
+  <%= link_to follow_user_path(f.id) do %>
+    <span class="material-icons">add_circle_outline</span>
+  <% end %>
+</div>
+</div>

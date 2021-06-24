@@ -1,0 +1,46 @@
+<div class="sidebar column">
+    <div class="profile-user">
+        <%= link_to user_path(current_user.id), class: 'user' do %>
+            <%= avatar_for(current_user) %>
+        <% end %>        
+        <h3 class = "mt-4"><%= current_user.fullname %></h3>
+    </div>
+    <div class="profile-follows">
+        <div class="follows">
+            <h4><%= current_user.followings.count %></h4>
+            <p>Followers</p>
+        </div>
+        <div class="divisor"></div>
+        <div class="follows">
+            <h4><%= current_user.followers.count %></h4>
+            <p>Following</p>
+        </div>
+    </div>
+    <div class="profile-links">
+        <div>
+            <span class="material-icons">home</span>
+            <%= link_to "HOME", root_path %>
+        </div>
+        <div>
+            <span class="material-icons">person</span>
+            <%= link_to "PROFILE",   user_path(current_user.id), method: :get %>
+        </div>
+
+        <div>
+            <span class="material-icons">person</span>
+            <%= button_to "SIGNOUT",   destroy_user_session_path, method: :delete, class: "special-button"%>
+        </div>
+    </div>
+    </div>
+        <div class="top-bar">
+            <%= image_tag "logo.jpeg", class: "main-logo" %>
+            <div>
+            <%= link_to edit_user_registration_path(@user) do%>
+                <span class="material-icons">create</span> 
+            <% end %>
+            <span class="material-icons">local_post_office</span>
+            <span class="material-icons">search</span>
+            <span class="material-icons">settings</span>
+            <a><%= button_to "SIGNOUT", destroy_user_session_path, method: :delete, class: "special-button"%></a>
+        </div>
+</div>
